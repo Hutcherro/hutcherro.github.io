@@ -5,8 +5,13 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-	site: 'https://example.com',
+	// site: 'https://example.com',
 	integrations: [mdx(), sitemap()],
-	// output: static,
-	// outDir: docs,
+	site: `https://www.hutcherro.github.io`,
+	output: 'static',
+  	outDir: './docs',
+  	build: {
+    assets: 'astro'
+  }
+
 });
